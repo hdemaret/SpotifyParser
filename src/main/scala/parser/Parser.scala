@@ -53,16 +53,16 @@ object Parser {
     /** TOP TRACKS **/
 
     val lSchema = StructType(
-      StructField("artist_id", StringType, nullable = false) ::
-      StructField("track_id", StringType, nullable = true) ::
-      StructField("track_name", StringType, nullable = true) ::
-      StructField("track_popularity", StringType, nullable = true) ::
-      StructField("track_number", StringType, nullable = true) ::
-      StructField("album_id", StringType, nullable = true) ::
-      StructField("album_name", StringType, nullable = true) ::
-      StructField("album_date", StringType, nullable = true) ::
-      StructField("album_type", StringType, nullable = false) ::
-      StructField("type", StringType, nullable = false) :: Nil)
+      StructField(sArtistId, StringType, nullable = false) ::
+      StructField(sTrackId, StringType, nullable = true) ::
+      StructField(sTrackName, StringType, nullable = true) ::
+      StructField(sTrackPopularity, StringType, nullable = true) ::
+      StructField(sTrackNumber, StringType, nullable = true) ::
+      StructField(sAlbumId, StringType, nullable = true) ::
+      StructField(sAlbumName, StringType, nullable = true) ::
+      StructField(sAlbumDate, StringType, nullable = true) ::
+      StructField(sAlbumType, StringType, nullable = false) ::
+      StructField(sType, StringType, nullable = false) :: Nil)
 
     val lTopTracks = ujson.read(ArtistEndpoints.getArtistTopTracks(lArtistsList(0)))(sTracks)
     mSpark

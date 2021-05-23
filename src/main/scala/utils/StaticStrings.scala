@@ -20,6 +20,7 @@ object StaticStrings {
   val sAlbumName = "album_name"
   val sAlbumId = "album_id"
   val sAlbumType = "album_type"
+  val sAlbumDate = "album_date"
 
   val sArtistName = "artist_name"
   val sArtistId = "artist_id"
